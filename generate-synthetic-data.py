@@ -3,6 +3,7 @@ import string
 from pymongo import MongoClient, errors
 
 # Configuration
+mongo_uri = '' #redacted
 database_name = 'DeviceDatabase'
 collection_name = 'devices'
 
@@ -11,12 +12,6 @@ mongo_client = MongoClient(mongo_uri)
 database = mongo_client[database_name]
 device_collection = database[collection_name]
 
-
-
-# Initialize MongoDB client
-mongo_client = MongoClient(mongo_uri)
-database = mongo_client[database_name]
-device_collection = database[collection_name]
 
 # Function to generate random string
 def random_string(length=8):
